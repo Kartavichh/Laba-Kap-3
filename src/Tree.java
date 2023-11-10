@@ -10,9 +10,9 @@ public class Tree {
             while (true)
             {
                 parentNode = currentNode;
-                if (field.equals(currentNode.getField())) {
+                if (field.equals(currentNode.field)) {
                     return;
-                } else if (field < currentNode.getField()) {
+                } else if (field < currentNode.field) {
                     currentNode = currentNode.left;
                     if (currentNode == null) {
                         parentNode.left = newNode;
@@ -28,8 +28,9 @@ public class Tree {
             }
         }
     }
-//    public Tree printTree(Tree tree){
-//        fot
-//        return tree;
-//    }
+    public void printTree(Node node){
+        System.out.println(node.field);
+        printTree(node.left);
+        printTree(node.right);
+    }
 }

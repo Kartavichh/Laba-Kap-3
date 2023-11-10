@@ -13,6 +13,6 @@ public class Node {
 
     public Node (){}
     public Node(Integer field){
-        field = this.field;
+        this.field = field;
     }
 }

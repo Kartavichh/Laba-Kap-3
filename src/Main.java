@@ -14,6 +14,6 @@ public class Main {
         tree.insertNode(8);
         tree.insertNode(9);
         tree.insertNode(3);
-        tree.printTree(tree);
+//        tree.printTree(tree);
     }
 }
