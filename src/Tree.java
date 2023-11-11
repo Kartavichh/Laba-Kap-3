@@ -28,9 +28,18 @@ public class Tree {
             }
         }
     }
-    public void printTree(Node node){
-        System.out.println(node.field);
-        printTree(node.left);
-        printTree(node.right);
+    public static void printTree(Node node){
+        if (node != null) {
+            System.out.println(node.field);
+            printTree(node.left);
+            printTree(node.right);
+        }
+    }
+    public static int max(Node node) {
+        if (node == null || node.checkForList()) {
+            return Integer.MIN_VALUE;
+        } else {
+            return Math.max(Math.max(max(node.left), max(node.right)), node.field);
+        }
     }
 }

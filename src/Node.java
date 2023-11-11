@@ -7,12 +7,15 @@ public class Node {
     public Node left = null;
     public Node right = null;
 
-    private boolean hasNext(Node node) {
-        return left != null;
-    }
+//    private boolean hasNext(Node node) {
+//        return left != null;
+//    }
 
     public Node (){}
     public Node(Integer field){
         this.field = field;
+    }
+    public boolean checkForList() {
+        return left == null && right == null;
     }
 }
